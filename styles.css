@@ -1,0 +1,400 @@
+/* UI */
+/* Desktop First */
+/* Breakpoint 1200px and above */
+/* RATING:  */
+.rating {
+  /* max-width: 55rem; */
+  height: 28rem;
+  background-color: var(--clr-purple-500);
+  color: var(--clr-white);
+  padding: var(--spacing-400);
+  /* Gap */
+  gap: var(--spacing-300);
+}
+
+.rating h1 {
+  max-width: 48rem;
+  font-weight: var(--fw-500);
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.rating h1 em {
+  color: var(--clr-yellow-500);
+}
+
+.rating h1 span {
+  font-style: italic;
+}
+
+.rating .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating .content-wrapper img {
+  max-width: 22.1rem;
+}
+
+.rating .content-wrapper p {
+  padding-top: var(--spacing-100);
+}
+
+/* Platforms */
+.platforms {
+  background-color: var(--clr-white);
+  padding: var(--spacing-300);
+}
+
+.platforms img {
+  width: 100%;
+  max-width: 31.6rem;
+  max-height: 6.7rem;
+  /* mix-blend-mode: lighten; */
+  margin-bottom: var(--spacing-300);
+}
+
+.platforms h2 {
+  width: 20.8rem;
+}
+
+/* Schedule */
+.schedule {
+  background-color: var(--clr-yellow-500);
+  padding: var(--spacing-300);
+  padding-bottom: 0px;
+}
+
+.schedule h2 {
+  width: 20.8rem;
+  margin-bottom: var(--spacing-200);
+}
+
+.schedule .img-wrapper {
+  max-height: 13.5rem;
+  overflow: hidden;
+}
+
+.schedule img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+/* Post */
+.post {
+  background-color: var(--clr-purple-100);
+  padding: var(--spacing-400);
+  overflow: hidden;
+  position: relative;
+  /* Gap */
+  gap: var(--spacing-300);
+}
+
+.post img {
+  /* Let img exceed the width of already defined grid item size. */
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+/* Followers */
+.followers {
+  background-color: var(--clr-purple-500);
+  padding: var(--spacing-300);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+.followers img {
+  /* width: 50%; */
+  width: 22.7rem;
+  height: 20rem;
+  aspect-ratio: 1/1;
+}
+
+.followers h2 {
+  color: var(--clr-white);
+  height: fit-content;
+  letter-spacing: 2px;
+}
+
+/* Audience */
+.audience {
+  background-color: var(--clr-white);
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  /* Gap */
+  gap: var(--spacing-400);
+}
+
+.audience .text-wrapper h2 {
+  padding-bottom: 1.5rem;
+}
+
+.audience img {
+  max-width: 17.8rem;
+  max-height: 6.7rem;
+  object-fit: cover;
+}
+
+/* Create */
+.create {
+  background-color: var(--clr-yellow-100);
+  padding: var(--spacing-400);
+  /* Gap */
+  gap: var(--spacing-300);
+}
+
+.create h2 {
+  margin-top: var(--spacing-500);
+}
+.create h2 em {
+  color: var(--clr-purple-500);
+}
+
+.create img {
+  width: 19rem;
+  height: 9rem;
+  margin-bottom: var(--spacing-500);
+}
+/* AI-content */
+.ai {
+  background-color: var(--clr-yellow-500);
+  padding: var(--spacing-300);
+  gap: 2rem;
+}
+
+.ai h2 {
+  letter-spacing: 2px;
+}
+
+.ai img {
+  width: 105%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layout */
+
+.bento-grid-container {
+  display: grid;
+  min-width: 120rem;
+  max-width: 170rem;
+  margin: 0 auto;
+
+  grid-template-columns:
+    minmax(25.6rem, 1fr) minmax(25.6rem, 1fr) minmax(25.6rem, 1fr)
+    minmax(25.6rem, 1fr);
+  grid-template-rows: repeat(3, 28.4rem);
+  grid-template-areas:
+    "column-1 column-2 column-2 column-3"
+    "column-1 column-2 column-2 column-3"
+    "column-1 column-4 column-5 column-5";
+  gap: var(--spacing-400);
+  padding: var(--spacing-400);
+}
+
+/* All the direct children of bento-grid-container and inside-element-wrapper is grid*/
+.bento-grid-container > *,
+.inside-element-wrapper {
+  display: grid;
+  gap: var(--spacing-400);
+}
+
+.bento-grid-item--element {
+  border-radius: 1.5rem;
+}
+
+.inside-element-wrapper {
+  grid-template-columns: repeat(2, minmax(20.3rem, 1fr));
+  max-height: 30rem;
+}
+
+/* Assign grid-area */
+.column-1 {
+  grid-area: column-1;
+}
+.column-2 {
+  grid-area: column-2;
+}
+.column-3 {
+  grid-area: column-3;
+}
+.column-4 {
+  grid-area: column-4;
+}
+.column-5 {
+  grid-area: column-5;
+}
+
+/* Breakpoint 1200px and below */
+@media screen and (max-width: 1200px) {
+  /* UI */
+  /* Platforms */
+  .platforms h2 {
+    width: 100%;
+  }
+
+  /* Schedule */
+
+  .schedule h2 {
+    /* Reset h2 to 100% */
+    width: 100%;
+  }
+
+  .schedule img {
+    width: 60%;
+    margin: 0;
+  }
+
+  /* Post */
+  .post {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
+  .post h2 {
+    letter-spacing: -0.1rem;
+  }
+
+  .post h2,
+  .post p {
+    text-align: center;
+  }
+
+  /* Followers */
+  .followers img {
+    margin-left: 5.7rem;
+  }
+
+  .followers h2 {
+    margin-right: 5.7rem;
+  }
+  /* Audience */
+  .audience {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Create */
+
+  .create h2 {
+    margin-top: 0;
+  }
+
+  .create img {
+    margin-bottom: 0;
+  }
+
+  /* AI-content */
+  .ai h2 {
+    letter-spacing: -0.8px;
+  }
+
+  .ai img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
+
+  /* Layout */
+  .bento-grid-container {
+    min-width: 68.8rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "column-2 column-2"
+      "column-3 column-3"
+      "column-5 column-5"
+      "column-4 column-4"
+      "column-1 column-1";
+  }
+
+  .column-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 576px and below */
+@media screen and (max-width: 576px) {
+  /* UI */
+  .inside-element-wrapper {
+    /* Reset max-height */
+    max-height: none;
+  }
+
+  /* Schedule */
+  .schedule .img-wrapper {
+    max-height: none;
+    overflow: auto;
+  }
+
+  .schedule img {
+    width: 70%;
+  }
+
+  /* Post */
+  .post {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding: var(--spacing-400);
+  }
+
+  /* Followers */
+  .followers {
+    flex-direction: column;
+    gap: var(--spacing-500);
+  }
+
+  .followers img {
+    margin: 0rem;
+  }
+
+  .followers h2 {
+    margin-right: 0rem;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  
+  /* Audience */
+  .audience {
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+  }
+
+  /* AI-content */
+
+  .ai img {
+    width: 70%;
+  }
+
+  /* Layout */
+  .bento-grid-container {
+    /* Reset min-width*/
+    min-width: fit-content;
+    /* Clear the definition of grid-template-areas */
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+  }
+
+  .bento-grid-item {
+    /* Reset grid-area to auto for all sections elements */
+    grid-area: auto;
+  }
+
+  .inside-element-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .column-1 {
+    grid-template-columns: 1fr;
+  }
+}
