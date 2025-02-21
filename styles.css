@@ -379,7 +379,7 @@
   /* Layout */
   .bento-grid-container {
     /* Reset min-width*/
-    min-width: fit-content;
+    min-width: 37rem;
     /* Clear the definition of grid-template-areas */
     grid-template-areas: none;
     grid-template-columns: 1fr;
